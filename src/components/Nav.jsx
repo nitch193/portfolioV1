@@ -66,9 +66,9 @@ const MenuLinks = ({ isOpen }) => {
         direction={['column', 'row', 'row', 'row']}
         pt={[4, 4, 0, 0]}
       >
-        <MenuItem to="/">About</MenuItem>
-        <MenuItem to="/faetures">Features </MenuItem>
-        <MenuItem to="/pricing">Pricing </MenuItem>
+        <MenuItem to="/about">About</MenuItem>
+        <MenuItem to="#projects">Projects </MenuItem>
+        <MenuItem to="#contact">Contact </MenuItem>
         <ColorModeSwitcher />
       </Stack>
     </Box>
@@ -96,9 +96,11 @@ const NavBarContainer = ({ children, ...props }) => {
 export function Logo(props) {
   return (
     <Box {...props}>
-      <Text fontSize="lg" fontWeight="bold">
-        Logo
-      </Text>
+      <Link href="/">
+        <Text fontSize="lg" fontWeight="bold">
+          Logo
+        </Text>
+      </Link>
     </Box>
   );
 }

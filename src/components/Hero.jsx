@@ -6,15 +6,23 @@ import {
   Container,
   Button,
   SimpleGrid,
-  useBreakpointValue,
-  IconProps,
-  Icon,
   Link,
+  Image,
+  Flex,
   ButtonGroup,
   IconButton,
+  keyframes,
 } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaCodepen } from 'react-icons/fa';
+import Blur from './Blur';
+import homeImg from '../assets/about.png';
 
+const gradient = keyframes`
+  0% {background-position:0% ;}
+  100% {background-position:100% ;}
+`;
+
+const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
 export default function Hero() {
   return (
     <Box>
@@ -31,39 +39,30 @@ export default function Hero() {
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
           >
-            <Text
-              mb="2"
-              fontSize="md"
-              fontWeight="bold"
-              letterSpacing="wide"
-              textTransform="uppercase"
-            >
-              Hi There! 👋, I am
+            <Text mb="2" fontSize="md" fontWeight="bold" letterSpacing="wide">
+              Hi, My name is
             </Text>
             <Text
               mb="2"
               w="full"
               paddingBottom="5px"
               bgClip="text"
-              bgGradient="linear(to-r,purple.300,cyan.800)"
+              bgGradient="linear(to-r,purple.400,blue.100)"
               fontWeight="extrabold"
+              bgSize="200% auto"
+              animation={animation}
             >
-              Nitesh Chaurasiya
+              Nitesh Chaurasiya.
             </Text>
-            <Text
-              fontSize="md"
-              fontWeight="bold"
-              letterSpacing="wide"
-              textTransform="uppercase"
-            >
-              Full-Stack Developer
+            <Text fontSize="md" fontWeight="bold" letterSpacing="wide">
+              Student + Developer
             </Text>
           </Heading>
           <Stack direction={{ base: 'row', sm: 'row' }} spacing={4}>
-            <Button colorScheme="blue" variant="solid" size="lg">
-              Projects
+            <Button colorScheme="purple" variant="outline" size="lg">
+              Contact Me
             </Button>
-            <Button variant="outline" colorScheme="blue" size="lg">
+            <Button variant="solid" colorScheme="purple" size="lg">
               Resume
             </Button>
           </Stack>
@@ -71,7 +70,7 @@ export default function Hero() {
             <Link href={'https://www.github.com/nitch193/'}>
               <IconButton
                 variant="outline"
-                colorScheme="white"
+                colorScheme="purple"
                 aria-label="Go to Github Profile"
                 fontSize="20px"
                 icon={<FaGithub />}
@@ -81,7 +80,7 @@ export default function Hero() {
             <Link href={'https://www.Linkedin.com/in/niteshchaurasiya/'}>
               <IconButton
                 variant="outline"
-                colorScheme="white"
+                colorScheme="purple"
                 aria-label="Go to LinkedIn Profile"
                 fontSize="20px"
                 isRound="true"
@@ -92,7 +91,7 @@ export default function Hero() {
               <IconButton
                 isRound="true"
                 variant="outline"
-                colorScheme="white"
+                colorScheme="purple"
                 aria-label="Checkout Codepens"
                 fontSize="20px"
                 icon={<FaCodepen />}
@@ -100,6 +99,31 @@ export default function Hero() {
             </Link>
           </ButtonGroup>
         </Stack>
+        <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}
+        >
+          <Box
+            position={'relative'}
+            height={'300px'}
+            rounded={'2xl'}
+            boxShadow={'2xl'}
+            width={'full'}
+            overflow={'hidden'}
+          >
+            <Image
+              alt={'Hero Image'}
+              fit={'cover'}
+              align={'center'}
+              w={'100%'}
+              h={'100%'}
+              src={homeImg}
+            />
+          </Box>
+        </Flex>
       </Container>
       <Blur
         position={'absolute'}
@@ -111,25 +135,3 @@ export default function Hero() {
     </Box>
   );
 }
-
-export const Blur = (props: IconProps) => {
-  return (
-    <Icon
-      width={useBreakpointValue({ base: '100%', md: '40vw', lg: '30vw' })}
-      zIndex={useBreakpointValue({ base: -1, md: -1, lg: 0 })}
-      height="560px"
-      viewBox="0 0 528 560"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
-      <circle cx="71" cy="61" r="111" fill="#F56565" />
-      <circle cx="244" cy="106" r="139" fill="#ED64A6" />
-      <circle cy="291" r="139" fill="#ED64A6" />
-      <circle cx="80.5" cy="189.5" r="101.5" fill="#ED8936" />
-      <circle cx="196.5" cy="317.5" r="101.5" fill="#ECC94B" />
-      <circle cx="70.5" cy="458.5" r="101.5" fill="#48BB78" />
-      <circle cx="426.5" cy="-0.5" r="101.5" fill="#4299E1" />
-    </Icon>
-  );
-};
