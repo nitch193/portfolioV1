@@ -2,43 +2,76 @@ import {
   Box,
   Flex,
   Heading,
+  Icon,
+  Link,
   SimpleGrid,
+  Stack,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import Blur from './Blur';
+import netflix from '../assets/projects/netflix.jpg';
+import trip from '../assets/projects/trip.png';
+import ascii from '../assets/projects/ascii.png';
+import sorting from '../assets/projects/sorting.png';
+import task from '../assets/projects/taskdo.png';
+import cvmake from '../assets/projects/cvmake.png';
 
-const testimonials = [
+const projectData = [
   {
-    name: 'Brandon P.',
-    role: 'Chief Marketing Officer',
-    content:
-      'It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!',
-    avatar:
-      'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+    name: 'Image-To-Ascii',
+    url: 'https://nitch193.github.io/Image-to-Ascii/',
+    code: 'https://github.com/nitch193/Image-to-Ascii',
+    about:
+      'Upload any image to convert it into an image of ascii characters and play your videos in ascii characters by uploading',
+    photo: ascii,
+    tools: 'JavaScript, HTML, Canvas API',
   },
   {
-    name: 'Krysta B.',
-    role: 'Entrepreneur',
-    content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
-    avatar:
-      'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+    name: 'Sorting Visualizer',
+    url: 'https://nitch193.github.io/Visualize-Sorting/',
+    code: 'https://github.com/nitch193/Visualize-Sorting',
+    about:
+      'Easily visualize some sorting algorithms such as bubble sort, merge sort, quick sort,insertion sort and selection sort',
+    photo: sorting,
+    tools: 'JavaScript ,Webpack, Canvas API',
   },
   {
-    name: 'Darcy L.',
-    role: 'Movie star',
-    content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
-    avatar:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80',
+    name: 'Netflix-Clone',
+    url: 'https://netflix-clone-859ff.web.app/',
+    code: 'https://github.com/nitch193/netflix-clone',
+    about:
+      'My attempt to build netflix clone using react and TMDB API. Click on any image to watch the trailer for that show/movie',
+    photo: netflix,
+    tools: 'React, TMDB API. Firebase',
   },
   {
-    name: 'Daniel T.',
-    role: 'Musician',
-    content:
-      'I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!',
-    avatar:
-      'https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+    name: 'CV-Make',
+    url: 'https://cv-make.netlify.app/',
+    code: 'https://github.com/nitch193/ATS-resume',
+    about:
+      'A free web app for making your single column ATS parsable resume by simply filling out forms, made using react',
+    photo: cvmake,
+    tools: 'React React-Hooks',
+  },
+  {
+    name: 'TaskDo',
+    url: 'https://nitch193.github.io/TaskDo/',
+    code: 'https://github.com/nitch193/TaskDo',
+    about:
+      'Simple Todo list app coded entirely in vanilla javascript and bundled with webpack, it has support of localstorage',
+    photo: task,
+    tools: 'Webpack, HTML, LocalStorage',
+  },
+  {
+    name: 'Trip-Log',
+    url: 'https://trip-log-app.herokuapp.com/',
+    code: 'https://github.com/nitch193/travel-log-api',
+    about:
+      'Keep a log of all the trips/jounerys that you did,add photos and memories. Double click on any place on the map to add an entry',
+    photo: trip,
+    tools: 'React Express MongoDB MapBox',
   },
 ];
 
@@ -49,20 +82,12 @@ const backgrounds = [
   `url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='185' viewBox='0 0 560 185' fill='none'%3E%3Cellipse cx='457.367' cy='123.926' rx='102.633' ry='61.0737' transform='rotate(-180 457.367 123.926)' fill='%23ECC94B'/%3E%3Cellipse cx='160.427' cy='61.0737' rx='102.633' ry='61.0737' transform='rotate(-180 160.427 61.0737)' fill='%239F7AEA'/%3E%3Cellipse cx='193.808' cy='111.771' rx='193.808' ry='73.2292' transform='rotate(-180 193.808 111.771)' fill='%234299E1'/%3E%3Cellipse cx='337.295' cy='74.415' rx='193.808' ry='73.2292' transform='rotate(-180 337.295 74.415)' fill='%2348BB78'/%3E%3C/svg%3E")`,
 ];
 
-interface TestimonialCardProps {
-  name: string;
-  role: string;
-  content: string;
-  avatar: string;
-  index: number;
-}
-
-function TestmonialCard(props: TestimonialCardProps) {
-  const { name, role, content, avatar, index } = props;
+function ProjectCard(props) {
+  const { name, url, about, photo, index, tools, code } = props;
   return (
     <Flex
       boxShadow={'lg'}
-      maxW={'450px'}
+      maxW={'400px'}
       direction={{ base: 'column-reverse', md: 'row' }}
       width={'full'}
       rounded={'xl'}
@@ -96,11 +121,49 @@ function TestmonialCard(props: TestimonialCardProps) {
         backgroundImage: backgrounds[index % 4],
       }}
     >
-      <Flex
-        direction={'column'}
-        textAlign={'left'}
-        justifyContent={'space-between'}
-      ></Flex>
+      <Box maxW={'445px'} w={'full'} p={6} overflow={'hidden'}>
+        <Box
+          h={'210px'}
+          bg={'gray.100'}
+          mt={-6}
+          mx={-6}
+          mb={6}
+          pos={'relative'}
+          bgImage={photo}
+          bgPosition="center"
+          bgSize="cover"
+        />
+        <Stack justifyContent={'start'}>
+          <Heading
+            color={useColorModeValue('gray.700', 'white')}
+            fontSize={'small'}
+            fontFamily={'body'}
+            letterSpacing={'wide'}
+          >
+            {tools.split(',').map(tool => (
+              <span>{tool}</span>
+            ))}
+          </Heading>
+          <Heading
+            color={useColorModeValue('gray.700', 'white')}
+            fontSize={'2xl'}
+            fontFamily={'body'}
+          >
+            <Link color="purple.400" href={url}>
+              {name}
+            </Link>
+          </Heading>
+          <Text color={'gray.500'}>{about}</Text>
+        </Stack>
+        <Stack direction="row" justify="center" mt={4} spacing={4}>
+          <Link href={code}>
+            <Icon as={FaGithub} />
+          </Link>
+          <Link href={url}>
+            <Icon as={FaExternalLinkAlt} />
+          </Link>
+        </Stack>
+      </Box>
     </Flex>
   );
 }
@@ -110,9 +173,11 @@ export default function Projects() {
     <Flex
       textAlign={'center'}
       pt={10}
+      ml="auto"
+      mr="auto"
       justifyContent={'center'}
       direction={'column'}
-      width={'full'}
+      maxW={'7xl'}
     >
       <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
         <Heading py={5} fontSize={48} fontWeight={'bold'}>
@@ -129,16 +194,15 @@ export default function Projects() {
         </Heading>
       </Box>
       <SimpleGrid
-        columns={{ base: 1, xl: 2, lg: 2 }}
+        columns={{ base: 1, xl: 3, lg: 2, md: 2 }}
         spacing={'16'}
         mt={16}
         mx={'auto'}
       >
-        {testimonials.map((cardInfo, index) => (
-          <TestmonialCard {...cardInfo} index={index} />
+        {projectData.map((cardInfo, index) => (
+          <ProjectCard {...cardInfo} index={index} />
         ))}
       </SimpleGrid>
-
       <Blur
         position="absolute"
         style={{ filter: 'blur(70px)' }}

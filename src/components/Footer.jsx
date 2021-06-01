@@ -25,7 +25,7 @@ export default function Footer() {
         <SiNodeDotJs />
         <Stack direction={'row'} spacing={6}>
           <Link href={'/about'}>About</Link>
-          <Link href={'/projects'}>Blog</Link>
+          <Link href={'/projects'}>Projects</Link>
           <Link href={'/contact'}>Contact</Link>
         </Stack>
       </Container>
