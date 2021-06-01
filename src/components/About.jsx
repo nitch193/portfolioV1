@@ -12,7 +12,6 @@ import {
   ListIcon,
   ListItem,
 } from '@chakra-ui/react';
-// import { FaLinkedin, FaGithub, FaCodepen } from 'react-icons/fa';
 import Blur from './Blur';
 import aboutImg from '../assets/home.png';
 import { ImPointRight } from 'react-icons/im';

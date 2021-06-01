@@ -59,12 +59,22 @@ export default function Hero() {
             </Text>
           </Heading>
           <Stack direction={{ base: 'row', sm: 'row' }} spacing={4}>
-            <Button colorScheme="purple" variant="outline" size="lg">
-              Contact Me
-            </Button>
-            <Button variant="solid" colorScheme="purple" size="lg">
-              Resume
-            </Button>
+            <Link href={'/contact'} _hover={{ textDecoration: 'none' }}>
+              <Button variant="outline" colorScheme="purple" size="lg">
+                Contact
+              </Button>
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                'https://mega.nz/file/bMhgxT6a#YTKE3LPNwB5qbS0d7clKgPESiije2qIuulgO1oj6g5Q'
+              }
+              _hover={{ textDecoration: 'none' }}
+            >
+              <Button variant="solid" colorScheme="purple" size="lg">
+                Resume
+              </Button>
+            </Link>
           </Stack>
           <ButtonGroup marginTop="2rem" spacing="6">
             <Link href={'https://www.github.com/nitch193/'}>

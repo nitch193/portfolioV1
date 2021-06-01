@@ -149,17 +149,17 @@ function ProjectCard(props) {
             fontSize={'2xl'}
             fontFamily={'body'}
           >
-            <Link color="purple.400" href={url}>
+            <Link color="purple.400" target="_blank" href={url}>
               {name}
             </Link>
           </Heading>
           <Text color={'gray.500'}>{about}</Text>
         </Stack>
         <Stack direction="row" justify="center" mt={4} spacing={4}>
-          <Link href={code}>
+          <Link target="_blank" href={code}>
             <Icon as={FaGithub} />
           </Link>
-          <Link href={url}>
+          <Link target="blank" href={url}>
             <Icon as={FaExternalLinkAlt} />
           </Link>
         </Stack>

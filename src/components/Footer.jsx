@@ -42,17 +42,20 @@ export default function Footer() {
         >
           <Text>© 2021 Nitesh Chaurasiya</Text>
           <ButtonGroup direction={'row'} spacing={6}>
-            <Link href={'https://github.com/nitch193/'}>
+            <Link target="_blank" href={'https://github.com/nitch193/'}>
               <IconButton colorScheme="purple" variant="outline" isRound="true">
                 <FaGithub />
               </IconButton>
             </Link>
-            <Link href={'https://linkedin.com/in/niteshchaurasiya/'}>
+            <Link
+              target="_blank"
+              href={'https://linkedin.com/in/niteshchaurasiya/'}
+            >
               <IconButton colorScheme="purple" variant="outline" isRound="true">
                 <FaLinkedin />
               </IconButton>
             </Link>
-            <Link href={'https://codepen.io/nitch193/'}>
+            <Link target="_blank" href={'https://codepen.io/nitch193/'}>
               <IconButton colorScheme="purple" variant="outline" isRound="true">
                 <FaCodepen />
               </IconButton>
