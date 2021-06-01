@@ -87,9 +87,9 @@ function ProjectCard(props) {
   return (
     <Flex
       boxShadow={'lg'}
-      maxW={'400px'}
+      width="fit-content"
+      maxW={'350px'}
       direction={{ base: 'column-reverse', md: 'row' }}
-      width={'full'}
       rounded={'xl'}
       p={10}
       justifyContent={'space-between'}
@@ -141,7 +141,7 @@ function ProjectCard(props) {
             letterSpacing={'wide'}
           >
             {tools.split(',').map(tool => (
-              <span>{tool}</span>
+              <span key={tool}>{tool}</span>
             ))}
           </Heading>
           <Heading
@@ -200,7 +200,7 @@ export default function Projects() {
         mx={'auto'}
       >
         {projectData.map((cardInfo, index) => (
-          <ProjectCard {...cardInfo} index={index} />
+          <ProjectCard key={index} {...cardInfo} index={index} />
         ))}
       </SimpleGrid>
       <Blur
