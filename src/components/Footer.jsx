@@ -3,13 +3,14 @@ import {
   ButtonGroup,
   Container,
   IconButton,
+  Image,
   Link,
   Stack,
   Text,
 } from '@chakra-ui/react';
 import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { SiNodeDotJs } from 'react-icons/si';
+import LogoImg from '../assets/logo.svg';
 
 export default function Footer() {
   return (
@@ -22,7 +23,7 @@ export default function Footer() {
         justify={'center'}
         align={'center'}
       >
-        <SiNodeDotJs />
+        <Image src={LogoImg} />
         <Stack direction={'row'} spacing={6}>
           <Link href={'/about'}>About</Link>
           <Link href={'/projects'}>Projects</Link>

@@ -7,9 +7,11 @@ import {
   Stack,
   IconButton,
   Container,
+  Image,
 } from '@chakra-ui/react';
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import LogoImg from '../assets/logo.svg';
 
 const Nav = props => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -97,9 +99,7 @@ export function Logo(props) {
   return (
     <Box {...props}>
       <Link href="/">
-        <Text fontSize="lg" fontWeight="bold">
-          Logo
-        </Text>
+        <Image src={LogoImg} alt="Logo" />
       </Link>
     </Box>
   );
