@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react';
 // import { FaLinkedin, FaGithub, FaCodepen } from 'react-icons/fa';
 import Blur from './Blur';
-import aboutImg from '../assets/home.svg';
+import aboutImg from '../assets/home.png';
 import { ImPointRight } from 'react-icons/im';
 import SkillsTools from './SkillsTools';
 
@@ -83,7 +83,7 @@ export default function About() {
         >
           <Box
             position={'relative'}
-            height={'300px'}
+            height={'350px'}
             rounded={'2xl'}
             boxShadow={'2xl'}
             width={'full'}
@@ -107,7 +107,7 @@ export default function About() {
         style={{ filter: 'blur(70px)' }}
         zIndex={-2}
       />
-      {/* <SkillsTools /> */}
+      <SkillsTools />
     </Box>
   );
 }

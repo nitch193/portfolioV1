@@ -45,7 +45,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
   return (
-    <Link href={to}>
+    <Link href={to} to={to}>
       <Text display="block" {...rest}>
         {children}
       </Text>
@@ -67,8 +67,8 @@ const MenuLinks = ({ isOpen }) => {
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/about">About</MenuItem>
-        <MenuItem to="#projects">Projects </MenuItem>
-        <MenuItem to="#contact">Contact </MenuItem>
+        <MenuItem to="/projects">Projects </MenuItem>
+        <MenuItem to="/contact">Contact </MenuItem>
         <ColorModeSwitcher />
       </Stack>
     </Box>
