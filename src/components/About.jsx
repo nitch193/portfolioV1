@@ -35,7 +35,7 @@ export default function About() {
       >
         <Stack>
           <Heading
-            lineHeight={1.1}
+            lineHeight={1}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
           >
             <Text
@@ -43,8 +43,8 @@ export default function About() {
               w="full"
               paddingBottom="5px"
               bgClip="text"
-              bgGradient="linear(to-r,purple.400,blue.100)"
-              fontWeight="bold"
+              bgGradient="linear(to-r,#5299D3,#C0FDFB)"
+              fontWeight="extrabold"
               bgSize="200% auto"
               animation={animation}
             >

@@ -47,7 +47,22 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
   return (
-    <Link href={to} to={to}>
+    <Link
+      _activeLink={{
+        outline: 'none',
+        border: '2px',
+        borderStyle: 'dashed',
+        borderColor: '#5299D3',
+      }}
+      _active={{
+        outline: 'none',
+        border: '2px',
+        borderStyle: 'dashed',
+        borderColor: '#5299D3',
+      }}
+      href={to}
+      to={to}
+    >
       <Text display="block" {...rest}>
         {children}
       </Text>

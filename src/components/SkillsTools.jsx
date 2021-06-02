@@ -24,7 +24,7 @@ export default function SkillsTools() {
     <Box p={8} maxW="7xl" mx={'auto'} px={{ base: 2, sm: 12, md: 17 }}>
       <Heading
         textAlign={'center'}
-        fontSize={'4xl'}
+        fontSize={'3xl'}
         py={10}
         fontWeight={'bold'}
       >
@@ -35,9 +35,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaJs} w={20} h={20} />
         </Box>
@@ -45,9 +45,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaPython} w={20} h={20} />
         </Box>
@@ -55,9 +55,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaCuttlefish} w={20} h={20} />
         </Box>
@@ -65,9 +65,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaReact} w={20} h={20} />
         </Box>
@@ -75,9 +75,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaNodeJs} w={20} h={20} />
         </Box>
@@ -85,9 +85,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={SiHtml5} w={20} h={20} />
         </Box>
@@ -95,9 +95,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={SiCss3} w={20} h={20} />
         </Box>
@@ -105,9 +105,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaGit} w={20} h={20} />
         </Box>
@@ -115,9 +115,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaLinux} w={20} h={20} />
         </Box>
@@ -125,9 +125,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={SiMongodb} w={20} h={20} />
         </Box>
@@ -135,9 +135,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={SiFirebase} w={20} h={20} />
         </Box>
@@ -145,9 +145,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={SiPostman} w={20} h={20} />
         </Box>
@@ -155,9 +155,9 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={SiVisualstudiocode} w={20} h={20} />
         </Box>
@@ -165,16 +165,16 @@ export default function SkillsTools() {
           p={8}
           display="flex"
           justifyContent="center"
-          // shadow={'xl'}
-          border={'1px solid'}
+          border={'2px solid #5299d3'}
           rounded={'lg'}
+          _hover={{ boxShadow: '2px 2px 30px 2px #c0fdfb' }}
         >
           <Icon as={FaFigma} w={20} h={20} />
         </Box>
       </SimpleGrid>
       <Heading
         textAlign={'center'}
-        fontSize={'4xl'}
+        fontSize={'3xl'}
         py={10}
         fontWeight={'bold'}
       >

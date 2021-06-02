@@ -41,9 +41,7 @@ export default function Contact() {
               />
             </FormControl>
             <Stack spacing={10}>
-              <Button variant="outline" colorScheme="purple">
-                Send
-              </Button>
+              <Button variant="outline">Send</Button>
             </Stack>
           </Stack>
         </Box>

@@ -44,7 +44,7 @@ export default function Footer() {
           <Text>© 2021 Nitesh Chaurasiya</Text>
           <ButtonGroup direction={'row'} spacing={6}>
             <Link target="_blank" href={'https://github.com/nitch193/'}>
-              <IconButton colorScheme="purple" variant="outline" isRound="true">
+              <IconButton variant="outline" isRound="true">
                 <FaGithub />
               </IconButton>
             </Link>
@@ -52,12 +52,12 @@ export default function Footer() {
               target="_blank"
               href={'https://linkedin.com/in/niteshchaurasiya/'}
             >
-              <IconButton colorScheme="purple" variant="outline" isRound="true">
+              <IconButton variant="outline" isRound="true">
                 <FaLinkedin />
               </IconButton>
             </Link>
             <Link target="_blank" href={'https://codepen.io/nitch193/'}>
-              <IconButton colorScheme="purple" variant="outline" isRound="true">
+              <IconButton variant="outline" isRound="true">
                 <FaCodepen />
               </IconButton>
             </Link>

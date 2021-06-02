@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaCodepen } from 'react-icons/fa';
 import Blur from './Blur';
-import homeImg from '../assets/about.png';
+import homeImg from '../assets/homeImg.png';
 
 const gradient = keyframes`
   0% {background-position:0% ;}
@@ -33,7 +33,7 @@ export default function Hero() {
         spacing={{ base: 10, lg: 32 }}
         py={{ base: 10, sm: 20, lg: 32 }}
       >
-        <Stack spacing={{ base: 10, md: 20 }}>
+        <Stack spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1}
             fontWeight={600}
@@ -47,21 +47,23 @@ export default function Hero() {
               w="full"
               paddingBottom="5px"
               bgClip="text"
-              bgGradient="linear(to-r,purple.400,blue.100)"
+              bgGradient="linear(to-r,#5299D3,#C0FDFB)"
               fontWeight="extrabold"
               bgSize="200% auto"
               animation={animation}
             >
               Nitesh Chaurasiya.
             </Text>
-            <Text fontSize="md" fontWeight="bold" letterSpacing="wide">
-              Student + Developer
+            <Text fontSize="md" lineHeight={1.1} letterSpacing="wider">
+              I am a software developer specializing in building websites with
+              modern tools and technologies. Currently , I'm an undergraduate
+              student at NIT Hamirpur.
             </Text>
           </Heading>
           <Stack direction={{ base: 'row', sm: 'row' }} spacing={4}>
-            <Link href={'/contact'} _hover={{ textDecoration: 'none' }}>
-              <Button variant="outline" colorScheme="purple" size="lg">
-                Contact
+            <Link href={'/projects'} _hover={{ textDecoration: 'none' }}>
+              <Button variant="outline" size="md">
+                My projects
               </Button>
             </Link>
             <Link
@@ -71,16 +73,15 @@ export default function Hero() {
               }
               _hover={{ textDecoration: 'none' }}
             >
-              <Button variant="solid" colorScheme="purple" size="lg">
+              <Button variant="solid" size="md">
                 Resume
               </Button>
             </Link>
           </Stack>
-          <ButtonGroup marginTop="2rem" spacing="6">
+          <ButtonGroup spacing="6">
             <Link href={'https://www.github.com/nitch193/'}>
               <IconButton
                 variant="outline"
-                colorScheme="purple"
                 aria-label="Go to Github Profile"
                 fontSize="20px"
                 icon={<FaGithub />}
@@ -90,7 +91,6 @@ export default function Hero() {
             <Link href={'https://www.Linkedin.com/in/niteshchaurasiya/'}>
               <IconButton
                 variant="outline"
-                colorScheme="purple"
                 aria-label="Go to LinkedIn Profile"
                 fontSize="20px"
                 isRound="true"
@@ -101,7 +101,6 @@ export default function Hero() {
               <IconButton
                 isRound="true"
                 variant="outline"
-                colorScheme="purple"
                 aria-label="Checkout Codepens"
                 fontSize="20px"
                 icon={<FaCodepen />}
@@ -119,8 +118,8 @@ export default function Hero() {
           <Box
             position={'relative'}
             height={'350px'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
+            // rounded={'2xl'}
+            // boxShadow={'2xl'}
             width={'full'}
             overflow={'hidden'}
           >

@@ -5,12 +5,12 @@ import GitHubCalendar from 'react-github-calendar';
 function Calender() {
   const colourTheme = {
     background: 'transparent',
-    text: 'gray',
-    grade4: '#8400b8',
-    grade3: '#b22ff4',
-    grade2: '#b265f6',
-    grade1: '#c084f5',
-    grade0: '#ecd9fc',
+    text: '#5299d3',
+    grade4: '#266192',
+    grade2: '#5299D3',
+    grade3: '#3288c3',
+    grade1: '#8bbce2',
+    grade0: '#eff5fb',
   };
   return (
     <Box maxW="7xl" px={{ base: 2, sm: 12, lg: 8, md: 17, xl: 12 }}>
