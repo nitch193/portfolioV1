@@ -114,7 +114,7 @@ export function Logo(props) {
   return (
     <Box {...props}>
       <Link href="/">
-        <Image src={LogoImg} alt="Logo" />
+        <Image htmlWidth="47px" htmlHeight="48px" src={LogoImg} alt="Logo" />
       </Link>
     </Box>
   );

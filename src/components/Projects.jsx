@@ -141,7 +141,9 @@ function ProjectCard(props) {
             letterSpacing={'wide'}
           >
             {tools.split(',').map(tool => (
-              <span key={tool}>{tool}</span>
+              <Text color="#529DD3" key={tool}>
+                {tool}
+              </Text>
             ))}
           </Heading>
           <Heading
@@ -149,17 +151,27 @@ function ProjectCard(props) {
             fontSize={'2xl'}
             fontFamily={'body'}
           >
-            <Link isExternal={true} href={url}>
+            <Link rel="noopener" isExternal={true} href={url}>
               {name}
             </Link>
           </Heading>
           <Text>{about}</Text>
         </Stack>
         <Stack direction="row" justify="center" mt={4} spacing={4}>
-          <Link target="_blank" href={code}>
+          <Link
+            aria-label="See the code for this project"
+            rel="noopener"
+            isExternal={true}
+            href={code}
+          >
             <Icon as={FaGithub} />
           </Link>
-          <Link target="blank" href={url}>
+          <Link
+            aria-label="See how it works in the demo"
+            rel="noopener"
+            isExternal={true}
+            href={url}
+          >
             <Icon as={FaExternalLinkAlt} />
           </Link>
         </Stack>

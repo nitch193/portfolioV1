@@ -68,6 +68,7 @@ export default function Hero() {
             </Link>
             <Link
               target="_blank"
+              rel="noopener"
               href={
                 'https://mega.nz/file/bMhgxT6a#YTKE3LPNwB5qbS0d7clKgPESiije2qIuulgO1oj6g5Q'
               }
@@ -88,7 +89,10 @@ export default function Hero() {
                 isRound="true"
               ></IconButton>
             </Link>
-            <Link href={'https://www.Linkedin.com/in/niteshchaurasiya/'}>
+            <Link
+              rel="noopener"
+              href={'https://www.Linkedin.com/in/niteshchaurasiya/'}
+            >
               <IconButton
                 variant="outline"
                 aria-label="Go to LinkedIn Profile"
@@ -97,11 +101,11 @@ export default function Hero() {
                 icon={<FaLinkedin />}
               ></IconButton>
             </Link>
-            <Link href={'https://www.codepen.io/nitch193/'}>
+            <Link rel="noopener" href={'https://www.codepen.io/nitch193/'}>
               <IconButton
                 isRound="true"
                 variant="outline"
-                aria-label="Checkout Codepens"
+                aria-label="Checkout Codepen"
                 fontSize="20px"
                 icon={<FaCodepen />}
               ></IconButton>
@@ -124,11 +128,13 @@ export default function Hero() {
             overflow={'hidden'}
           >
             <Image
+              htmlWidth="494px"
+              htmlHeight="521px"
               alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
               w={'100%'}
               h={'100%'}
+              fit={'cover'}
+              align={'center'}
               src={homeImg}
             />
           </Box>

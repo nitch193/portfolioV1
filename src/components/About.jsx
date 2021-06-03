@@ -92,6 +92,8 @@ export default function About() {
               alt={'Hero Image'}
               fit={'cover'}
               align={'center'}
+              htmlWidth="1000px"
+              htmlHeight="689px"
               w={'100%'}
               h={'100%'}
               src={aboutImg}

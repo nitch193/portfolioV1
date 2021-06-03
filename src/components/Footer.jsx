@@ -23,7 +23,7 @@ export default function Footer() {
         justify={'center'}
         align={'center'}
       >
-        <Image src={LogoImg} />
+        <Image alt="logo" htmlWidth="47px" htmlHeight="48px" src={LogoImg} />
         <Stack direction={'row'} spacing={6}>
           <Link href={'/about'}>About</Link>
           <Link href={'/projects'}>Projects</Link>
@@ -43,21 +43,45 @@ export default function Footer() {
         >
           <Text>© 2021 Nitesh Chaurasiya</Text>
           <ButtonGroup direction={'row'} spacing={6}>
-            <Link target="_blank" href={'https://github.com/nitch193/'}>
-              <IconButton variant="outline" isRound="true">
+            <Link
+              aria-label="Checkout my github profile"
+              target="_blank"
+              href={'https://github.com/nitch193/'}
+              rel="noopener"
+            >
+              <IconButton
+                variant="outline"
+                isRound="true"
+                aria-label="Checkout my github profile"
+              >
                 <FaGithub />
               </IconButton>
             </Link>
             <Link
+              aria-label="Connect with me on linkedin "
+              rel="noopener"
               target="_blank"
               href={'https://linkedin.com/in/niteshchaurasiya/'}
             >
-              <IconButton variant="outline" isRound="true">
+              <IconButton
+                variant="outline"
+                aria-label="Connect with me on linkedin "
+                isRound="true"
+              >
                 <FaLinkedin />
               </IconButton>
             </Link>
-            <Link target="_blank" href={'https://codepen.io/nitch193/'}>
-              <IconButton variant="outline" isRound="true">
+            <Link
+              aria-label="Checkout my Codepen"
+              rel="noopener"
+              target="_blank"
+              href={'https://codepen.io/nitch193/'}
+            >
+              <IconButton
+                aria-label="Checkout Codepen"
+                variant="outline"
+                isRound="true"
+              >
                 <FaCodepen />
               </IconButton>
             </Link>
