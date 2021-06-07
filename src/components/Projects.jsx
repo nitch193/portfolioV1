@@ -3,6 +3,7 @@ import {
   Flex,
   Heading,
   Icon,
+  keyframes,
   Link,
   SimpleGrid,
   Stack,
@@ -17,6 +18,12 @@ import ascii from '../assets/projects/ascii.png';
 import sorting from '../assets/projects/sorting.png';
 import task from '../assets/projects/taskdo.png';
 import cvmake from '../assets/projects/cvmake.png';
+const gradient = keyframes`
+    0% {background-position:0% ;}
+    100% {background-position:100% ;}
+  `;
+
+const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
 
 const projectData = [
   {
@@ -24,7 +31,7 @@ const projectData = [
     url: 'https://nitch193.github.io/Image-to-Ascii/',
     code: 'https://github.com/nitch193/Image-to-Ascii',
     about:
-      'Upload any image to convert it into an image of ascii characters and play your videos in ascii characters by uploading',
+      'Upload any image to convert it into an image of ascii characters, it also support playing your videos in ascii characters.',
     photo: ascii,
     tools: 'JavaScript, HTML, Canvas API',
   },
@@ -193,7 +200,17 @@ export default function Projects() {
       maxW={'7xl'}
     >
       <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
-        <Heading py={5} fontSize={48} fontWeight={'bold'}>
+        <Heading
+          py={5}
+          fontSize={48}
+          mb="2"
+          w="full"
+          bgClip="text"
+          bgGradient="linear(to-r,#5299D3,#C0FDFB)"
+          fontWeight="extrabold"
+          bgSize="200% auto"
+          animation={animation}
+        >
           Things I've built
         </Heading>
         <Heading
@@ -202,6 +219,7 @@ export default function Projects() {
           fontFamily={'Inter'}
           fontWeight={'medium'}
           fontSize={24}
+          textAlign="center"
         >
           Here are some projects I've worked on recently
         </Heading>

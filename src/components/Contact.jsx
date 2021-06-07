@@ -10,11 +10,19 @@ import {
   Text,
   Textarea,
   useToast,
+  keyframes,
 } from '@chakra-ui/react';
 import Blur from './Blur';
 
 import db from '../firebase';
 import { useState } from 'react';
+
+const gradient = keyframes`
+    0% {background-position:0% ;}
+    100% {background-position:100% ;}
+  `;
+
+const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -56,7 +64,19 @@ export default function Contact() {
     <Flex align={'center'} justify={'center'}>
       <Stack spacing={8} mx={'auto'} maxW={'lg'} py={4} px={6}>
         <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Want to know more?</Heading>
+          <Heading
+            py={5}
+            fontSize="3xl"
+            mb="2"
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r,#5299D3,#C0FDFB)"
+            fontWeight="extrabold"
+            bgSize="200% auto"
+            animation={animation}
+          >
+            Want to know more?
+          </Heading>
           <Text fontSize={'lg'}>
             Fill out the form below to get in touch with me
           </Text>

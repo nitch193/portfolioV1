@@ -35,7 +35,7 @@ export default function About() {
       >
         <Stack>
           <Heading
-            lineHeight={1}
+            lineHeight={1.1}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
           >
             <Text
@@ -51,11 +51,11 @@ export default function About() {
               About Me
             </Text>
           </Heading>
-          <Text fontSize="lg" letterSpacing="wide">
+          <Text fontSize="md" fontWeight={600} letterSpacing="wide">
             Hi there 👋, I am Nitesh Chaurasiya from Varanasi, India. I am an
             undergraduate pursuing B.Tech in E & CE in NIT Hamirpur.
           </Text>
-          <Text fontSize="lg" letterSpacing="wide">
+          <Text fontSize="md" fontWeight={600} letterSpacing="wide">
             Apart from coding, some other activities that I love to do!
           </Text>
           <List>

@@ -4,10 +4,14 @@ import { extendTheme } from '@chakra-ui/react';
 const styles = {
   global: props => ({
     body: {
-      color: mode('gray.800', '#FCFFFD')(props),
-      bg: mode('white', '#020300')(props),
+      color: mode('', '#FCFFFD')(props),
+      bg: mode('', '#020300')(props),
     },
   }),
+};
+const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
 };
 
 const components = {
@@ -34,14 +38,12 @@ const components = {
         borderColor: props.colorMode === 'dark' ? '#5299D3' : '',
       }),
       // 4. We can override existing variants
-      solid: props => ({
-        bg: props.colorMode === 'dark' ? '#5299D3' : '',
-      }),
     },
   },
 };
 
 const theme = extendTheme({
+  config,
   components,
   styles,
 });

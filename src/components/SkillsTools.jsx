@@ -28,7 +28,7 @@ export default function SkillsTools() {
         py={10}
         fontWeight={'bold'}
       >
-        Professional Skills
+        Skills
       </Heading>
       <SimpleGrid minChildWidth="150px" spacing={{ base: 5, lg: 8 }}>
         <Box
