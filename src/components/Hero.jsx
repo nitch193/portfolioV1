@@ -70,7 +70,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener"
               href={
-                'https://mega.nz/file/bMhgxT6a#YTKE3LPNwB5qbS0d7clKgPESiije2qIuulgO1oj6g5Q'
+                'https://drive.google.com/file/d/1sa62oS32QPX27S5W8SeZXDeFyzK17ajP/view?usp=sharing'
               }
               _hover={{ textDecoration: 'none' }}
             >
