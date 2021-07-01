@@ -3,19 +3,19 @@ import {
   ButtonGroup,
   Container,
   IconButton,
-  Image,
+  // Image,
   Link,
   Stack,
   Text,
 } from '@chakra-ui/react';
 import { FaCodepen, FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import LogoImg from '../assets/logo.svg';
+// import LogoImg from '../assets/logo.svg';
 
 export default function Footer() {
   return (
-    <Box>
-      <Container
+    <Box mt="6">
+      {/* <Container
         as={Stack}
         maxW={'7xl'}
         py={4}
@@ -29,7 +29,7 @@ export default function Footer() {
           <Link href={'/projects'}>Projects</Link>
           <Link href={'/contact'}>Contact</Link>
         </Stack>
-      </Container>
+      </Container> */}
 
       <Box borderTopWidth={1} borderStyle={'solid'}>
         <Container

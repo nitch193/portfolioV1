@@ -16,6 +16,7 @@ import {
 import { FaLinkedin, FaGithub, FaCodepen } from 'react-icons/fa';
 import Blur from './Blur';
 import homeImg from '../assets/homeImg.png';
+import { HashLink } from 'react-router-hash-link';
 
 const gradient = keyframes`
   0% {background-position:0% ;}
@@ -25,7 +26,7 @@ const gradient = keyframes`
 const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
 export default function Hero() {
   return (
-    <Box>
+    <Box id="hero">
       <Container
         as={SimpleGrid}
         maxW={'7xl'}
@@ -61,11 +62,11 @@ export default function Hero() {
             </Text>
           </Heading>
           <Stack direction={{ base: 'row', sm: 'row' }} spacing={4}>
-            <Link href={'/projects'} _hover={{ textDecoration: 'none' }}>
+            <HashLink smooth to="/#projects">
               <Button variant="outline" size="md">
                 My projects
               </Button>
-            </Link>
+            </HashLink>
             <Link
               target="_blank"
               rel="noopener"

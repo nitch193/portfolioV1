@@ -189,58 +189,60 @@ function ProjectCard(props) {
 
 export default function Projects() {
   return (
-    <Flex
-      textAlign={'center'}
-      pt={10}
-      ml="auto"
-      mb={24}
-      mr="auto"
-      justifyContent={'center'}
-      direction={'column'}
-      maxW={'7xl'}
-    >
-      <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
-        <Heading
-          py={5}
-          fontSize={48}
-          mb="2"
-          w="full"
-          bgClip="text"
-          bgGradient="linear(to-r,#5299D3,#C0FDFB)"
-          fontWeight="extrabold"
-          bgSize="200% auto"
-          animation={animation}
-        >
-          Things I've built
-        </Heading>
-        <Heading
-          margin={'auto'}
-          width={'70%'}
-          fontFamily={'Inter'}
-          fontWeight={'medium'}
-          fontSize={24}
-          textAlign="center"
-        >
-          Here are some projects I've worked on recently
-        </Heading>
-      </Box>
-      <SimpleGrid
-        columns={{ base: 1, xl: 3, lg: 2, md: 2 }}
-        spacing={'16'}
-        mt={16}
-        mx={'auto'}
+    <Box id="projects">
+      <Flex
+        textAlign={'center'}
+        pt={10}
+        ml="auto"
+        mb={24}
+        mr="auto"
+        justifyContent={'center'}
+        direction={'column'}
+        maxW={'7xl'}
       >
-        {projectData.map((cardInfo, index) => (
-          <ProjectCard key={index} {...cardInfo} index={index} />
-        ))}
-      </SimpleGrid>
-      <Blur
-        position="absolute"
-        style={{ filter: 'blur(70px)' }}
-        zIndex={-2}
-        top={-10}
-        left={-10}
-      />
-    </Flex>
+        <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
+          <Heading
+            py={5}
+            fontSize={48}
+            mb="2"
+            w="full"
+            bgClip="text"
+            bgGradient="linear(to-r,#5299D3,#C0FDFB)"
+            fontWeight="extrabold"
+            bgSize="200% auto"
+            animation={animation}
+          >
+            Things I've built
+          </Heading>
+          <Heading
+            margin={'auto'}
+            width={'70%'}
+            fontFamily={'Inter'}
+            fontWeight={'medium'}
+            fontSize={24}
+            textAlign="center"
+          >
+            Here are some projects I've worked on recently
+          </Heading>
+        </Box>
+        <SimpleGrid
+          columns={{ base: 1, xl: 3, lg: 2, md: 2 }}
+          spacing={'16'}
+          mt={16}
+          mx={'auto'}
+        >
+          {projectData.map((cardInfo, index) => (
+            <ProjectCard key={index} {...cardInfo} index={index} />
+          ))}
+        </SimpleGrid>
+        <Blur
+          position="absolute"
+          style={{ filter: 'blur(70px)' }}
+          zIndex={-2}
+          top={-10}
+          left={-10}
+        />
+      </Flex>
+    </Box>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Link,
   Box,
   Flex,
   Text,
@@ -12,6 +11,7 @@ import {
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import LogoImg from '../assets/logo.svg';
+import { HashLink } from 'react-router-hash-link';
 
 const Nav = props => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,27 +46,33 @@ const MenuToggle = ({ toggle, isOpen }) => {
 };
 
 const MenuItem = ({ children, isLast, to = '/', ...rest }) => {
+  console.log(to);
   return (
-    <Link
-      _activeLink={{
-        outline: 'none',
-        border: '2px',
-        borderStyle: 'dashed',
-        borderColor: '#5299D3',
-      }}
-      _active={{
-        outline: 'none',
-        border: '2px',
-        borderStyle: 'dashed',
-        borderColor: '#5299D3',
-      }}
-      href={to}
-      to={to}
-    >
+    <HashLink smooth to={`${to}`}>
       <Text display="block" {...rest}>
         {children}
       </Text>
-    </Link>
+    </HashLink>
+    // <Link
+    //   _activeLink={{
+    //     outline: 'none',
+    //     border: '2px',
+    //     borderStyle: 'dashed',
+    //     borderColor: '#5299D3',
+    //   }}
+    //   _active={{
+    //     outline: 'none',
+    //     border: '2px',
+    //     borderStyle: 'dashed',
+    //     borderColor: '#5299D3',
+    //   }}
+    //   href={to}
+    //   to={to}
+    // >
+    //   <Text display="block" {...rest}>
+    //     {children}
+    //   </Text>
+    // </Link>
   );
 };
 
@@ -83,9 +89,9 @@ const MenuLinks = ({ isOpen }) => {
         direction={['column', 'row', 'row', 'row']}
         pt={[4, 4, 0, 0]}
       >
-        <MenuItem to="/about">About</MenuItem>
-        <MenuItem to="/projects">Projects </MenuItem>
-        <MenuItem to="/contact">Contact </MenuItem>
+        <MenuItem to="/#about">About</MenuItem>
+        <MenuItem to="/#projects">Projects </MenuItem>
+        <MenuItem to="/#contact">Contact </MenuItem>
         <ColorModeSwitcher />
       </Stack>
     </Box>
@@ -113,9 +119,9 @@ const NavBarContainer = ({ children, ...props }) => {
 export function Logo(props) {
   return (
     <Box {...props}>
-      <Link href="/">
+      <HashLink to="/">
         <Image htmlWidth="47px" htmlHeight="48px" src={LogoImg} alt="Logo" />
-      </Link>
+      </HashLink>
     </Box>
   );
 }

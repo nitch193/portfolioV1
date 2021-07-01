@@ -25,7 +25,7 @@ const gradient = keyframes`
 const animation = `${gradient} cubic-bezier(0.59, 0.82, 0.08, 0.55) 1s infinite alternate`;
 export default function About() {
   return (
-    <Box>
+    <Box id="about">
       <Container
         as={SimpleGrid}
         maxW={'7xl'}

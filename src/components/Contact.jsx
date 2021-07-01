@@ -61,74 +61,76 @@ export default function Contact() {
   };
 
   return (
-    <Flex align={'center'} justify={'center'}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={4} px={6}>
-        <Stack align={'center'}>
-          <Heading
-            py={5}
-            fontSize="3xl"
-            mb="2"
-            w="full"
-            bgClip="text"
-            bgGradient="linear(to-r,#5299D3,#C0FDFB)"
-            fontWeight="extrabold"
-            bgSize="200% auto"
-            animation={animation}
-          >
-            Want to know more?
-          </Heading>
-          <Text fontSize={'lg'}>
-            Fill out the form below to get in touch with me
-          </Text>
-        </Stack>
-        <Box rounded={'lg'} boxShadow={'lg'} p={8}>
-          <form onSubmit={sendMessage}>
-            <Stack spacing={4}>
-              <FormControl id="name" isRequired>
-                <FormLabel>Your name</FormLabel>
-                <Input
-                  onChange={e => setName(e.target.value)}
-                  type="text"
-                  required
-                  placeholder="Full name"
-                />
-              </FormControl>
-              <FormControl id="email" isRequired>
-                <FormLabel>Email address</FormLabel>
-                <Input
-                  onChange={e => setEmail(e.target.value)}
-                  type="email"
-                  required
-                  placeholder="Email id"
-                />
-              </FormControl>
-              <FormControl id="message" isRequired>
-                <FormLabel>Message</FormLabel>
-                <Textarea
-                  onChange={e => {
-                    setMessage(e.target.value);
-                  }}
-                  type="text"
-                  required
-                  placeholder="Write your message here"
-                />
-              </FormControl>
-              <Stack spacing={10}>
-                <Button type="submit" variant="outline">
-                  Send
-                </Button>
+    <section id="contact">
+      <Flex align={'center'} justify={'center'}>
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={4} px={6}>
+          <Stack align={'center'}>
+            <Heading
+              py={5}
+              fontSize="3xl"
+              mb="2"
+              w="full"
+              bgClip="text"
+              bgGradient="linear(to-r,#5299D3,#C0FDFB)"
+              fontWeight="extrabold"
+              bgSize="200% auto"
+              animation={animation}
+            >
+              Want to know more?
+            </Heading>
+            <Text fontSize={'lg'}>
+              Fill out the form below to get in touch with me
+            </Text>
+          </Stack>
+          <Box rounded={'lg'} boxShadow={'lg'} p={8}>
+            <form onSubmit={sendMessage}>
+              <Stack spacing={4}>
+                <FormControl id="name" isRequired>
+                  <FormLabel>Your name</FormLabel>
+                  <Input
+                    onChange={e => setName(e.target.value)}
+                    type="text"
+                    required
+                    placeholder="Full name"
+                  />
+                </FormControl>
+                <FormControl id="email" isRequired>
+                  <FormLabel>Email address</FormLabel>
+                  <Input
+                    onChange={e => setEmail(e.target.value)}
+                    type="email"
+                    required
+                    placeholder="Email id"
+                  />
+                </FormControl>
+                <FormControl id="message" isRequired>
+                  <FormLabel>Message</FormLabel>
+                  <Textarea
+                    onChange={e => {
+                      setMessage(e.target.value);
+                    }}
+                    type="text"
+                    required
+                    placeholder="Write your message here"
+                  />
+                </FormControl>
+                <Stack spacing={10}>
+                  <Button type="submit" variant="outline">
+                    Send
+                  </Button>
+                </Stack>
               </Stack>
-            </Stack>
-          </form>
-        </Box>
-      </Stack>
-      <Blur
-        position={'absolute'}
-        top={-10}
-        left={-10}
-        style={{ filter: 'blur(70px)' }}
-        zIndex={-2}
-      />
-    </Flex>
+            </form>
+          </Box>
+        </Stack>
+        <Blur
+          position={'absolute'}
+          top={-10}
+          left={-10}
+          style={{ filter: 'blur(70px)' }}
+          zIndex={-2}
+        />
+      </Flex>
+    </section>
   );
 }
